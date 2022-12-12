@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<label>Nhập Tháng</label>
+<input id="soThang" type="number">
+<button onclick="Tinh()">Số Ngày Trong Tháng</button>
+<p id="ketQua">Kết Quả</p>
+<body>
+<script>
+  function Tinh() {
+let thang = +document.getElementById('soThang').value
+      switch (thang){
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+              document.getElementById('ketQua').innerHTML= 'Tháng Này Có 31 day'
+              break;
+          case 2:
+              document.getElementById('ketQua').innerHTML= 'Tháng Này Có 28,29 day'
+              break;
+          case 4:
+          case 6:
+          case 9:
+          case 11:
+              document.getElementById('ketQua').innerHTML= 'Tháng Này có 30 day'
+              break;
+          default:
+              document.getElementById('ketQua').innerHTML= 'Không có Tháng này'
+              break;
+      }
+  }
+</script>
+</body>
+</html>
